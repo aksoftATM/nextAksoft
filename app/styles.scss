@@ -1,0 +1,60 @@
+/* styles.module.scss */
+.slides {
+    display: grid;
+  
+    > .slide {
+      grid-area: 1 / -1;
+    }
+  
+    > button {
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: white;
+      position: absolute;
+      font-size: 5rem;
+      width: 5rem;
+      height: 5rem;
+      top: 30%;
+      transition: opacity 0.3s;
+      opacity: 0.7;
+      z-index: 5;
+  
+      &:hover {
+        opacity: 1;
+      }
+  
+      &:focus {
+        outline: none;
+      }
+  
+      &:first-child {
+        left: -50%;
+      }
+  
+      &:last-child {
+        right: -50%;
+      }
+    }
+  }
+  
+  .slide {
+    // ... (same styles as before)
+  }
+  
+  .slideContent {
+    // ... (same styles as before)
+  }
+  
+  .slideContentInner {
+    // ... (same styles as before)
+  }
+  
+  .slideBackground {
+    // ... (same styles as before)
+  }
+  
+  .slide[data-active] {
+    // ... (same styles as before)
+  }
+  

@@ -11,21 +11,21 @@ export const Header = () => {
         </div>
         <div className={styles.header_menu}>
           <ul className={styles.menu_list}>
-            <li className={styles.menu_item}>
-              <Link href="/">Главная</Link>
-            </li>
-            <li className={styles.menu_item}>
-              <Link href="/works">Наши работы</Link>
-            </li>
-            <li className={styles.menu_item}>
-              <Link href="/service">Услуги</Link>
-            </li>
-            <li className={styles.menu_item}>
-              <Link href="/about">О нас</Link>
-            </li>
-            <li className={styles.menu_item}>
-              <Link href="/contact">Контакты</Link>
-            </li>
+            <Link href="/">
+              <li className={styles.menu_item}>Главная</li>
+            </Link>
+            <Link href="/works">
+              <li className={styles.menu_item}>Наши работы</li>
+            </Link>
+            <Link href="/service">
+              <li className={styles.menu_item}>Услуги</li>
+            </Link>
+            <Link href="/about">
+              <li className={styles.menu_item}>О нас</li>
+            </Link>
+            <Link href="/contact">
+              <li className={styles.menu_item}>Контакты</li>
+            </Link>
           </ul>
         </div>
       </div>

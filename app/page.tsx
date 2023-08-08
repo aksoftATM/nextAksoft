@@ -1,20 +1,41 @@
 import styles from "./page.module.css";
-import { BannerComponent } from "@/components/banner";
-import { ServiceComponent } from "@/components/service";
+import { BannerComponent } from "@/module/banner";
+import { ServiceComponent } from "@/module/service";
 import { CardThree } from "@/module/Animation/card";
-import { FooterComponent } from "@/components/footer";
-import { FormComponent } from "@/components/form";
+import { FooterComponent } from "@/module/footer";
+import { FormComponent } from "@/module/form";
 import DentApp from "../assets/image/photo_2023-08-04_10-55-31.jpg";
 import Breath from "../assets/image/61b1a4e68529d3b914d4d130d20fe7cd_640x480.jpg";
 import Cheber from "../assets/image/iphone-640x480.jpeg";
-import { Header } from "@/components/header";
+import { Header } from "@/module/header";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      {/* <div style={{ width: "100%", minHeight: "300px" }}>
-        <img src="" alt="" />
-      </div> */}
+      <Head>
+        <title>aksoft</title>
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE-edge" />
+        <base href="aksoft.dev" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Разработка приложений и сайтов aksoft, автоматизация бизнес машин"
+        />
+        <meta
+          name="keywords"
+          content="разработка приложений, разработка сайтов, разработка сайтов бишкек, разработка приложений бишкек, автоматизация бизнеса"
+        />
+        <meta property="og:title" content="Разработка приложений" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://aksoft.dev/" />
+        <meta
+          property="og:site_name"
+          content="aksoft - разработка приложений"
+        />
+      </Head>
+
       <Header />
 
       <div

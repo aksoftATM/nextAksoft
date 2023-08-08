@@ -1,7 +1,7 @@
 "use client";
 
 import { FaInstagram } from "react-icons/fa";
-import Typer from "../UI/Typer";
+import Typer from "../../components/UI/Typer";
 import styles from "./style.module.scss";
 
 export const FooterComponent = () => {

@@ -1,6 +1,6 @@
 "use client";
 
-import Typer from "../UI/Typer";
+import Typer from "../../components/UI/Typer";
 import "./style.scss";
 
 export const BannerComponent = () => {

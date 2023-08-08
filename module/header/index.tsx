@@ -7,9 +7,7 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.header_wrapper}>
         <div className={styles.header_logo}>
-          <h3 className={styles.h3} style={{ textTransform: "lowercase" }}>
-            aksoft
-          </h3>
+          <h3 className={styles.h3}>aksoft</h3>
         </div>
         <div className={styles.header_menu}>
           <ul className={styles.menu_list}>

@@ -7,7 +7,6 @@ import DentApp from "../assets/image/photo_2023-08-04_10-55-31.jpg";
 import Breath from "../assets/image/61b1a4e68529d3b914d4d130d20fe7cd_640x480.jpg";
 import Cheber from "../assets/image/iphone-640x480.jpeg";
 import { GoMoveToTop } from "react-icons/go";
-import { motion } from "framer-motion";
 import Head from "next/head";
 import "../app/globals.css";
 import styles from "../styles/works.module.scss";

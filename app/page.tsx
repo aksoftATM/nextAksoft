@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./page.module.css";
 import { BannerComponent } from "@/module/banner";
 import { ServiceComponent } from "@/module/service";
@@ -9,10 +11,23 @@ import Breath from "../assets/image/61b1a4e68529d3b914d4d130d20fe7cd_640x480.jpg
 import Cheber from "../assets/image/iphone-640x480.jpeg";
 import { Header } from "@/module/header";
 import Head from "next/head";
+import { GoMoveToTop } from "react-icons/go";
+import { useRef } from "react";
 
 export default function Home() {
+  const onTopRef = useRef<HTMLDivElement>(null);
+
+  function handleTopClick() {
+    if (onTopRef.current) {
+      onTopRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <main className={styles.main}>
+      <div className={styles.icon_up_scroll} onClick={handleTopClick}>
+        <GoMoveToTop size={50} />
+      </div>
       <Head>
         <title>aksoft</title>
         <meta charSet="UTF-8" />
@@ -35,8 +50,9 @@ export default function Home() {
           content="aksoft - разработка приложений"
         />
       </Head>
-
-      <Header />
+      <div ref={onTopRef} style={{ width: "100%" }}>
+        <Header />
+      </div>
 
       <div
         style={{

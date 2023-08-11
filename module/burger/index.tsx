@@ -1,9 +1,14 @@
+"use client";
+
 import { useState } from "react";
-import Drawer from "react-modern-drawer";
+// import Drawer from "react-modern-drawer";
 import Link from "next/link";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import "react-modern-drawer/dist/index.css";
 import styles from "./style.module.scss";
+import dynamic from "next/dynamic";
+
+const Drawer = dynamic(() => import("react-modern-drawer"), { ssr: false });
 
 export const Burger = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -26,7 +31,6 @@ export const Burger = () => {
         open={isOpen}
         onClose={toggleDrawer}
         direction="top"
-        className={styles.drawer}
         style={{ width: "100vw", height: "100vh", background: "black" }}
       >
         <div className={styles.drawer_wrapper}>

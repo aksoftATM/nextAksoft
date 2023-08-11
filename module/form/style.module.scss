@@ -41,27 +41,21 @@
                 transition: all 0.5s;
             }
             .input:focus {
-                box-shadow: 
-                0 0 1px #0072d0,
-                0 0 2px #0072d0,
-                0 0 5px #0072d0,
-                0 0 8px #0072d0,
-                0 0 10px #0072d0,
-                0 0 15px #0072d0;
+               border: 1px solid #727272;
             }
         }
         .form_btn {
             width: 880px;
             height: 48px;
             margin-top: 25px;
-            background-color: #0072d0 ;
+            background-color:#727272 ;
             border-radius: 4px;
             font-size: 20px;
             transition: 0.5s;
             cursor: pointer;
         }
         .form_btn:hover {
-            background-color: #1900d5;
+            background-color:#3c3939;
         }
     }
 }

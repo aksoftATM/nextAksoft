@@ -9,7 +9,7 @@ export const FooterComponent = () => {
     <footer className={styles.footer}>
       <h1 className={styles.h1}>Aksoft</h1>
       <div className={styles.mini_slogan}>
-        <Typer text="Создавать - это наша страсть, это то, что делает нас живыми." />
+        <Typer text="Aksoft   -    это скорость эффективность и качество" />
       </div>
       <div className={styles.contact}>
         <p className={styles.p}>+996551881999</p>

@@ -1,6 +1,8 @@
 import { Header } from "@/module/header";
 import "../app/globals.css";
 import Head from "next/head";
+import styles from "../styles/about.module.scss";
+import { Burger } from "@/module/burger";
 
 export default function about() {
   return (
@@ -27,7 +29,12 @@ export default function about() {
           content="aksoft - разработка приложений"
         />
       </Head>
-      <Header />
+      <div className={styles.header_container}>
+        <Header />
+      </div>
+      <div className={styles.burger_container}>
+        <Burger />
+      </div>
       about
     </div>
   );

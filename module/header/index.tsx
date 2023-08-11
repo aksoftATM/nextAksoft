@@ -7,7 +7,9 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.header_wrapper}>
         <div className={styles.header_logo}>
-          <h3 className={styles.h3}>aksoft</h3>
+          <Link href="/">
+            <h3 className={styles.h3}>aksoft</h3>
+          </Link>
         </div>
         <div className={styles.header_menu}>
           <ul className={styles.menu_list}>

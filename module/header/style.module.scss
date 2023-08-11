@@ -25,20 +25,18 @@
         }
         .h3 {
             color: hsl(0, 0%, 28%);
-            font-size: 50px!important;
+            font-size: 60px!important;
             font-weight: bold!important;
-            letter-spacing: 7px!important;
+            letter-spacing: 5px!important;
             cursor: pointer;
             text-transform: lowercase !important;
-          }
-          
-          .h3 {
             padding: 64px;
             background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
             background-clip: text;
             -webkit-text-fill-color: transparent;
             
           }
+         
           .h3:hover {
             animation: shine 5s infinite linear;
           }

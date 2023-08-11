@@ -9,19 +9,12 @@ export const BannerComponent = () => {
       <div className="ser-bn">
         <div className="serbn-wrapper">
           <div className="serbn-info">
-            <h1 className="top-text">Услуги по созданию сайтов и приложений</h1>
-            <h1 className="mid-text">нашей Веб студии</h1>
+            <h1 className="top-text">
+              Разработка сайтов, веб-сервисов и мобильных приложений
+            </h1>
+            <h1 className="mid-text">JS & JAVA</h1>
             <div className="under-text">
-              <Typer
-                text="Создание сайтов и
-                Веб приложений
-                под ключ в Бишкеке"
-              />
-              <Typer
-                text="Мы разработаем вам под ключ сайт и мобильное
-                приложение любой сложности за адекватную стоимость и поможем запустить
-                в сеть."
-              />
+              <Typer text="Автоматизации бизнес-процессов с помощью современных технологии." />
             </div>
             <button className="serbn-btn">Бесплатная консультация</button>
           </div>

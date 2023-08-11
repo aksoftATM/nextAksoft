@@ -1,7 +1,8 @@
 import { Header } from "@/module/header";
-import "../styles/contact.scss";
 import "../app/globals.css";
 import Head from "next/head";
+import styles from "../styles/contact.module.scss";
+import { Burger } from "@/module/burger";
 
 export default function contact() {
   return (
@@ -28,40 +29,41 @@ export default function contact() {
           content="aksoft - разработка приложений"
         />
       </Head>
-      <Header />
+      <div className={styles.header_container}>
+        <Header />
+      </div>
+      <div className={styles.burger_container}>
+        <Burger />
+      </div>
 
-      <div className="contact">
-        <div className="wrapper">
-          <div className="contact">
-            <div className="contact-wrapper">
-              <div className="contact-info">
-                <h1 className="contact-desc">Контакты</h1>
-                <ul className="contact-list">
-                  <li className="contact-item">
-                    <h4>E-Mail</h4>
-                    <h5>mitapp@mitapp.pro</h5>
-                  </li>
-                  <li className="contact-item">
-                    <h4>Телефон</h4>
-                    <h5>
-                      +996556112212
-                      <br />
-                      +996501112212
-                    </h5>
-                  </li>
-                  <li className="contact-item">
-                    <h4>Адрес</h4>
-                    <h5>г. Бишкек, ул. 7-апреля д.4/4. 7-й этаж 2 кабинет</h5>
-                  </li>
-                  <li className="contact-item">
-                    <h4>Соц. сети</h4>
-                    <h5>Facebook / Instagram</h5>
-                  </li>
-                </ul>
-              </div>
-              <div className="contact-location">место для карты</div>
-            </div>
+      <div className={styles.contact}>
+        <div className={styles.contact_wrapper}>
+          <div className={styles.contact_info}>
+            <h1 className={styles.contact_desc}>Контакты</h1>
+            <ul className={styles.contact_list}>
+              <li className={styles.contact_item}>
+                <h4>E-Mail</h4>
+                <h5>aksoft@gmail.com</h5>
+              </li>
+              <li className={styles.contact_item}>
+                <h4>Телефон</h4>
+                <h5>
+                  +996556112212
+                  <br />
+                  +996501112212
+                </h5>
+              </li>
+              <li className={styles.contact_item}>
+                <h4>Адрес</h4>
+                <h5>г. Бишкек, ул. Байтик-Баатыра 86 / 4 этаж</h5>
+              </li>
+              <li className={styles.contact_item}>
+                <h4>Соц. сети</h4>
+                <h5>Instagram</h5>
+              </li>
+            </ul>
           </div>
+          <div className={styles.location}>Локация</div>
         </div>
       </div>
     </>

@@ -65,3 +65,25 @@
         }
     }
 }
+        @media screen and (max-width: 992px) {
+            .form {
+                .form_wrapper {
+                    .img {
+                        width: 90%;
+                    }
+                    .form_title {
+                        width: 90%;
+                    }
+                    .inp_place {
+                        width: 90%;
+                        .top_inp {
+                            flex-direction: column;
+                            width: 100%;
+                        }
+                    }
+                    .form_btn {
+                        width: 90%;
+                    }
+                }
+            }
+        }

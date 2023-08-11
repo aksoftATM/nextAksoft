@@ -10,6 +10,7 @@ import { GoMoveToTop } from "react-icons/go";
 import Head from "next/head";
 import "../app/globals.css";
 import styles from "../styles/works.module.scss";
+import { Burger } from "@/module/burger";
 
 export default function works() {
   const dentappRef = useRef<HTMLDivElement>(null);
@@ -69,13 +70,15 @@ export default function works() {
       <div className={styles.icon_up_scroll} onClick={handleTopClick}>
         <GoMoveToTop size={50} />
       </div>
-      <div ref={onTopRef}>
+      <div ref={onTopRef} className={styles.header_container}>
         <Header />
+      </div>
+      <div className={styles.burger_container}>
+        <Burger />
       </div>
       <div
         style={{
           width: "100%",
-          minHeight: "650px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -91,6 +94,7 @@ export default function works() {
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
+            flexWrap: "wrap",
           }}
         >
           <div onClick={handleDentappClick}>

@@ -1,7 +1,9 @@
 import { Header } from "@/module/header";
-import "../app/globals.css";
 import { ServiceComponent } from "@/module/service";
 import Head from "next/head";
+import "../app/globals.css";
+import styles from "../styles/service.module.scss";
+import { Burger } from "@/module/burger";
 
 export default function Service() {
   return (
@@ -30,7 +32,12 @@ export default function Service() {
           content="aksoft - разработка приложений"
         />
       </Head>
-      <Header />
+      <div className={styles.header_container}>
+        <Header />
+      </div>
+      <div className={styles.burger_container}>
+        <Burger />
+      </div>
       <h1>Наши услуги</h1>
       <ServiceComponent />
     </div>

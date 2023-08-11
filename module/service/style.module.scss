@@ -2,11 +2,13 @@
     background-color: #212121;
     width: 100%;
     margin-top: 50px;
-    padding: 70px 0;
+    padding: 70px 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
     .card {
         padding: 10px;
         width: 290px;

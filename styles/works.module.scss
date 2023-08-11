@@ -38,3 +38,22 @@
         z-index: 3;
     }
 }
+
+.header_container {
+    width: 100%;
+}
+
+.burger_container {
+    width: 100%;
+    display: none;
+}
+
+@media screen and (max-width: 1090px) {
+    .header_container {
+        display: none;
+    }
+    
+    .burger_container {
+        display: block;
+    }
+}

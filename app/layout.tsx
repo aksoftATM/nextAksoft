@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Aksoft",
   description:
-    "Разработка приложений и сайтов aksoft, автоматизация бизнес машин",
+    "Разработка веб приложений и сайтов, автоматизация бизнеса",
   viewport: "initial-scale=1.0, width=device-width",
   keywords:
     "разработка приложений, разработка сайтов, разработка сайтов бишкек, разработка приложений бишкек, автоматизация бизнеса",

@@ -9,15 +9,20 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-      
+        .animation_container {
+            transition: 0.6s;
+            z-index: 6;
+        }
+        .animation_container:hover {
+            transform: scale(2);
+        }
         .form_title {
             width: 600px;
             text-align: center;
             margin-bottom: 40px;
         }
         .img {
-            width: 50%;
-            margin: 40px;
+            width: 25%;
             z-index: 0;
         }
         .inp_place {

@@ -1,19 +1,19 @@
-.ser-bn {
+.ser_bn {
     width: 100%;
     height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    .serbn-wrapper {
+    .serbn_wrapper {
         width: 100%;
-        .serbn-info {
-            .mid-text {
+        .serbn_info {
+            .mid_text {
                 color: #727272;
                 margin-bottom: 30px;
                 position: relative;
             }
-            .mid-text::before {
+            .mid_text::before {
                 content: '';
                 width: 22%;
                 height: 10px;
@@ -22,11 +22,11 @@
                 bottom: -30px;
                 transition: 1s;
             }
-            .under-text {
+            .under_text {
                 padding-top: 30px;
                 // max-width: 600px;
             }
-            .serbn-btn {
+            .serbn_btn {
                 width: 200px;
                 height: 42px;
                 margin-top: 30px;
@@ -35,12 +35,12 @@
                 transition: 0.5s;
                 cursor: pointer;
             }
-            .serbn-btn:hover {
+            .serbn_btn:hover {
                 background-color: #4c4949;
             }
         }
-        .serbn-info:hover {
-            .mid-text::before {
+        .serbn_info:hover {
+            .mid_text::before {
                 width: 53%;
             }
         }

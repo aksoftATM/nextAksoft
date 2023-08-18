@@ -43,14 +43,14 @@ export default function contact() {
             <ul className={styles.contact_list}>
               <li className={styles.contact_item}>
                 <h4>E-Mail</h4>
-                <h5>aksoft@gmail.com</h5>
+                <h5>aksoftkg@gmail.com</h5>
               </li>
               <li className={styles.contact_item}>
                 <h4>Телефон</h4>
                 <h5>
-                  +996556112212
+                  +996999886644
                   <br />
-                  +996501112212
+                  +996505088099
                 </h5>
               </li>
               <li className={styles.contact_item}>
@@ -59,7 +59,7 @@ export default function contact() {
               </li>
               <li className={styles.contact_item}>
                 <h4>Соц. сети</h4>
-                <h5>Instagram</h5>
+                <h5>Instagram aksoftdev</h5>
               </li>
             </ul>
           </div>

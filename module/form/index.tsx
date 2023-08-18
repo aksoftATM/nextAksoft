@@ -1,12 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import AnimateItem from "@/assets/image/animation_llb2867x.json";
+import Lottie from "lottie-web";
+import PhoneImg from "@/assets/image/phone.png";
 import styles from "./style.module.scss";
 
 export const FormComponent = () => {
   const [fName, setFName] = useState<string>();
   const [fEmail, setFEmail] = useState<string>();
   const [fNumber, setFNumber] = useState<number | string>();
+
+  const AnimateContainer = useRef<any>(null);
+
+  useEffect(() => {
+    const loadAnimation = async () => {
+      await Lottie.loadAnimation({
+        container: AnimateContainer.current,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        animationData: AnimateItem,
+      });
+    };
+
+    loadAnimation();
+  }, []);
   return (
     <>
       <div className={styles.form}>
@@ -14,11 +33,8 @@ export const FormComponent = () => {
           <div className={styles.form_title}>
             <h1 className={styles.h1}>Оставить заявку</h1>
           </div>
-          <img
-            src="https://mitapp.pro/static/img/mac.png"
-            alt=""
-            className={styles.img}
-          />
+          <img src={PhoneImg.src} alt="" className={styles.img} />
+
           <div className={styles.inp_place}>
             <div className={styles.top_inp}>
               <input

@@ -7,6 +7,15 @@
     display: none;
 }
 
+.about {
+    padding: 50px 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+
+
 @media screen and (max-width: 1090px) {
     .header_container {
         display: none;

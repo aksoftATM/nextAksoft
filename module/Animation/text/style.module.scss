@@ -1,0 +1,24 @@
+.text_animate {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 950px) {
+    .text_animate {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 790px) {
+    .text_animate {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .text_animate {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .text_animate {
+        font-size: 16px;
+    }
+}

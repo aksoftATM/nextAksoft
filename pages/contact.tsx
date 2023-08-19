@@ -3,6 +3,7 @@ import "../app/globals.css";
 import Head from "next/head";
 import styles from "../styles/contact.module.scss";
 import { Burger } from "@/module/burger";
+import { FooterComponent } from "@/module/footer";
 
 export default function contact() {
   return (
@@ -47,10 +48,15 @@ export default function contact() {
               </li>
               <li className={styles.contact_item}>
                 <h4>Телефон</h4>
-                <h5>
-                  +996999886644
-                  <br />
-                  +996505088099
+                <h5
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "10px",
+                  }}
+                >
+                  <a href="tel:+996999886644">+996999886644</a>
+                  <a href="tel:+996505088099">+996505088099</a>
                 </h5>
               </li>
               <li className={styles.contact_item}>
@@ -66,6 +72,7 @@ export default function contact() {
           <div className={styles.location}>Локация</div>
         </div>
       </div>
+      <FooterComponent />
     </>
   );
 }

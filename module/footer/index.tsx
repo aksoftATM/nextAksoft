@@ -42,7 +42,7 @@ export const FooterComponent = () => {
           <a target="blank" href="https://www.instagram.com/aksoftdev/">
             <FaInstagram size={30} />
           </a>
-          <a target="blank" href="https://www.instagram.com/aksoftdev/">
+          <a target="blank" href="tg://resolve?domain=jakshybala">
             <LiaTelegramPlane size={30} />
           </a>
           <a
@@ -56,7 +56,6 @@ export const FooterComponent = () => {
     </footer>
   );
 };
-
 //  <p className={styles.p}>+996999886644</p>
 // <p className={styles.p}>aksoft@gmail.com</p>
 // <p className={styles.p}>г. Бишкек, ул. Байтик-Баатыра 86 / 4 этаж</p>

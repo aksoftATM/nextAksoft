@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import styles from "../styles/about.module.scss";
 import "../app/globals.css";
 import AnimatedCharacters from "@/module/Animation/text/animationText";
+import { FooterComponent } from "@/module/footer";
 
 export default function about() {
   const placeholderText = [
@@ -63,6 +64,7 @@ export default function about() {
           <AnimatedCharacters key={index} {...item} />
         ))}
       </motion.div>
+      <FooterComponent />
     </div>
   );
 }

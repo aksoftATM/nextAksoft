@@ -3,7 +3,7 @@
 import Typer from "../../components/UI/Typer";
 import styles from "./style.module.scss";
 
-export const BannerComponent = () => {
+export const BannerComponent = ({ scroll }: any) => {
   return (
     <>
       <div className={styles.ser_bn}>
@@ -16,7 +16,7 @@ export const BannerComponent = () => {
             <div className={styles.under_text}>
               <Typer text="Автоматизации бизнес-процессов с помощью современных технологии." />
             </div>
-            <button className={styles.serbn_btn}>
+            <button className={styles.serbn_btn} onClick={scroll}>
               Бесплатная консультация
             </button>
           </div>

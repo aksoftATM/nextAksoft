@@ -24,4 +24,23 @@
     .burger_container {
         display: block;
     }
+    .about {
+        padding: 50px 100px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .about {
+        padding: 50px 60px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .about {
+        padding: 50px 30px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .about {
+        padding: 50px 10px;
+    }
 }

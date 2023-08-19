@@ -10,30 +10,28 @@
       cursor: pointer;
     }
     .burger_logo {
-        .h3 {
+        .logo_head {
             color: hsl(0, 0%, 28%);
             font-size: 45px;
             font-weight: bold!important;
             letter-spacing: 7px!important;
             cursor: pointer;
-            text-transform: uppercase !important;
+            text-transform: lowercase !important;
             background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shines 5s infinite linear;
+            animation: shines 12s infinite linear;
         }
         
-          @keyframes shines {
-            0% {
-              background-position: 0;
-            }
-            60% {
-              background-position: 600px;
-            }
-            100% {
-              background-position: 600px;
-            }
+        @keyframes shines {
+          0% {
+            background-position: 0;
           }
+        
+          100% {
+            background-position: 700px; 
+          }
+        }
     }
 }
 
@@ -49,7 +47,7 @@
     z-index: 50;
   }
     .burger_logo {
-        .h3 {
+        .logo_animate {
             color: hsl(0, 0%, 28%);
             font-size: 45px;
             font-weight: bold!important;
@@ -60,10 +58,10 @@
             background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shines 5s infinite linear;
+            animation: shiness 12s infinite linear;
         }
         
-          @keyframes shines {
+          @keyframes shiness {
             0% {
               background-position: 0;
             }
@@ -71,7 +69,7 @@
               background-position: 600px;
             }
             100% {
-              background-position: 600px;
+              background-position: 700px;
             }
           }
     }

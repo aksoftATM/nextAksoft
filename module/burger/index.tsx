@@ -19,7 +19,7 @@ export const Burger = () => {
       <div className={styles.burger}>
         <div className={styles.burger_logo}>
           <Link href="/">
-            <h3 className={styles.h3}>aksoft</h3>
+            <h3 className={styles.logo_head}>aksoft</h3>
           </Link>
         </div>
         <div className={styles.burger_icon} onClick={() => setIsOpen(true)}>
@@ -39,7 +39,7 @@ export const Burger = () => {
           <ul className={styles.menu_list} onClick={() => setIsOpen(false)}>
             <div className={styles.burger_logo}>
               <Link href="/">
-                <h3 className={styles.h3}>aksoft</h3>
+                <h3 className={styles.logo_animate}>aksoft</h3>
               </Link>
             </div>
             <Link href="/">

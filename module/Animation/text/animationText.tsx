@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import styles from "./style.module.scss";
 
 interface WordWrapperProps {
   children: React.ReactNode;
@@ -70,10 +71,12 @@ const AnimatedCharacters: React.FC<AnimatedCharactersProps> = ({
                     overflow: "hidden",
                     display: "inline-block",
                   }}
+                  className={styles.span}
                 >
                   <motion.span
-                    style={{ display: "inline-block", fontSize: "24px" }}
+                    style={{ display: "inline-block" }}
                     variants={item}
+                    className={styles.text_animate}
                   >
                     {element}
                   </motion.span>

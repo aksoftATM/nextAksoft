@@ -18,23 +18,29 @@ import { Burger } from "@/module/burger";
 
 export default function Home() {
   const onTopRef = useRef<HTMLDivElement>(null);
+  const onFormRef = useRef<HTMLDivElement>(null);
 
   function handleTopClick() {
     if (onTopRef.current) {
       onTopRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }
+  function handleFormClick() {
+    if (onFormRef.current) {
+      onFormRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   return (
     <>
       <main className={styles.main}>
-        <div className={styles.icon_up_scroll} onClick={handleTopClick}>
-          <GoMoveToTop size={50} />
-        </div>
         <div ref={onTopRef} className={styles.header_container}>
           <Header />
         </div>
-        <div className={styles.burger_container}>
+        <div className={styles.icon_up_scroll} onClick={handleTopClick}>
+          <GoMoveToTop size={50} />
+        </div>
+        <div className={styles.burger_container} ref={onTopRef}>
           <Burger />
         </div>
         <div
@@ -46,9 +52,9 @@ export default function Home() {
             alignItems: "center",
           }}
         >
-          <BannerComponent />
+          <BannerComponent scroll={handleFormClick} />
         </div>
-        <div style={{ width: "100%", minHeight: "830px" }}>
+        <div style={{ width: "100%", minHeight: "830px" }} ref={onFormRef}>
           <FormComponent />
         </div>
         <div className={styles.our_work}>

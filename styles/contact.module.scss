@@ -10,11 +10,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
+        flex-direction: row;
         gap: 100px;
         .contact_info {
             width: 500px;
             height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             .contact_desc {
                 margin-bottom: 20px;
             }
@@ -49,22 +53,34 @@
     }
 }
 
-@media screen and (max-width: 1095px) {
+@media screen and (max-width: 1150px) {
     .contact {
-        .contact-wrapper {
-            gap: 20px;
+        .contact_wrapper {
+            flex-direction: column !important;
+            gap: 100px;
+            .contact_info {
+                height: auto;
+                .contact_desc {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    font-size: 32px;
+                }
+            }
         }
     }
 }
 
+
+
 @media screen and (max-width: 540px) {
     .contact {
-        .contact-wrapper {
-            .contact-info {
+        .contact_wrapper {
+            .contact_info {
                 width: 90vw;
                 height: 90vw;
             }
-            .contact-location {
+            .location {
                 width: 90vw;
                 height: 90vw;
                 font-size: medium;

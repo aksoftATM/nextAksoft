@@ -12,18 +12,71 @@
     .more_info {
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 150px;
         margin-top: 100px;
         .dentapp {
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .title_name {
+                padding-left: 30px;
+            }
+            .title {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 0 40px;
+                .phara {
+                    font-size: 24px;
+                    color: white;
+                    line-height: 1.5rem;
+
+                }
+            }
         }
     
         .breath {
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .title_name {
+                padding-left: 30px;
+            }
+            .title {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 0 40px;
+                .phara {
+                    font-size: 24px;
+                    color: white;
+                    line-height: 1.5rem;
+
+                }
+            }
         }
     
         .cheber {
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .title_name {
+                padding-left: 30px;
+            }
+            .title {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 0 40px;
+                .phara {
+                    font-size: 24px;
+                    color: white;
+                    line-height: 1.5rem;
+                }
+            }
         }
     }
     .icon_up_scroll {
@@ -52,5 +105,36 @@
     
     .burger_container {
         display: block;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .works_main {
+        .more_info {
+            .dentapp {
+                .title {
+                    padding: 0 25px;
+                    .phara {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .breath {
+                .title {
+                    padding: 0 25px;
+                    .phara {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .cheber {
+                .title {
+                    padding: 0 25px;
+                    .phara {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
     }
 }

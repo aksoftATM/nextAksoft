@@ -8,6 +8,7 @@ import { MdOutlineDesignServices } from "react-icons/md";
 import { motion } from "framer-motion";
 import "../app/globals.css";
 import styles from "../styles/service.module.scss";
+import { FooterComponent } from "@/module/footer";
 
 export default function Service() {
   const TitleRef = useRef<HTMLDivElement>(null);
@@ -126,6 +127,7 @@ export default function Service() {
           </motion.div>
         ))}
       </div>
+      <FooterComponent />
     </div>
   );
 }

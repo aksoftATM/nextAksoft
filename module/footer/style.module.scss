@@ -26,10 +26,36 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    flex-wrap: wrap;
+    gap: 35px;
     padding: 20px;
     .p {
         font-size: 18px;
+    }
+    .footer_logo {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        .logo {
+            font-size: 32px;
+            letter-spacing: 0.8px;
+        }
+        .footer_sub_text {
+            font-size: 16px;
+        }
+    }
+    .menu_list {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        .menu_item {
+            font-size: 18px;
+        }
+    }
+    .social {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
     }
     
    }
@@ -42,6 +68,9 @@
         flex-direction: column;
         padding: 0px;
         gap: 10px;
+    }
+    .menu_list {
+        display: none;
     }
  }   
 }

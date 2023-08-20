@@ -1,8 +1,14 @@
+@media screen and (max-width: 1090px) { 
+  .burger {
+    display: flex;
+  }
+  }
+
 .burger {
     width: 100%;
     padding: 30px 50px;
     z-index: 5;
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

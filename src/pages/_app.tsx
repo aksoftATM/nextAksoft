@@ -2,6 +2,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import "@/styles/globals.css";
+import { FooterComponent } from "@/components/module/footer";
+import { Header } from "@/components/module/header";
+import { Burger } from "@/components/module/burger";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -13,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
         animate="animateState"
         exit="exitState"
         transition={{
-          duration: 0.75,
+          duration: 0.3,
         }}
         variants={{
           initialState: {
@@ -27,7 +30,14 @@ export default function App({ Component, pageProps }: AppProps) {
           },
         }}
       >
+        <div className="header_container">
+          <Header />
+        </div>
+        <div className="burger_container">
+          <Burger />
+        </div>
         <Component {...pageProps} />
+        <FooterComponent />
       </motion.div>
     </AnimatePresence>
   );

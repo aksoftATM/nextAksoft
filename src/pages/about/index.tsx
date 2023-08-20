@@ -1,10 +1,7 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
-import styles from "./style.module.scss";
-import { Header } from "@/components/module/header";
-import { Burger } from "@/components/module/burger";
 import AnimatedCharacters from "@/components/animation/text";
-import { FooterComponent } from "@/components/module/footer";
+import styles from "./style.module.scss";
 
 export default function About() {
   const placeholderText = [
@@ -46,12 +43,7 @@ export default function About() {
           content="aksoft - разработка приложений"
         />
       </Head>
-      <div className={styles.header_container}>
-        <Header />
-      </div>
-      <div className={styles.burger_container}>
-        <Burger />
-      </div>
+
       <motion.div
         className={styles.about}
         initial="hidden"
@@ -63,7 +55,6 @@ export default function About() {
           <AnimatedCharacters key={index} {...item} />
         ))}
       </motion.div>
-      <FooterComponent />
     </div>
   );
 }

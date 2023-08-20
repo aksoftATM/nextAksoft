@@ -1,16 +1,13 @@
 "use client";
 
+import Head from "next/head";
 import React, { useRef } from "react";
 import DentApp from "@/assets/image/photo_2023-08-04_10-55-31.jpg";
 import Breath from "@/assets/image/61b1a4e68529d3b914d4d130d20fe7cd_640x480.jpg";
 import Cheber from "@/assets/image/iphone-640x480.jpeg";
 import { GoMoveToTop } from "react-icons/go";
-import Head from "next/head";
-import styles from "./style.module.scss";
-import { Header } from "@/components/module/header";
-import { Burger } from "@/components/module/burger";
 import { CardThree } from "@/components/animation/card";
-import { FooterComponent } from "@/components/module/footer";
+import styles from "./style.module.scss";
 
 export default function Works() {
   const dentappRef = useRef<HTMLDivElement>(null);
@@ -74,12 +71,7 @@ export default function Works() {
         <div className={styles.icon_up_scroll} onClick={handleTopClick}>
           <GoMoveToTop size={50} />
         </div>
-        <div ref={onTopRef} className={styles.header_container}>
-          <Header />
-        </div>
-        <div ref={onTopRef} className={styles.burger_container}>
-          <Burger />
-        </div>
+
         <div
           style={{
             width: "100%",
@@ -241,7 +233,6 @@ export default function Works() {
           </div>
         </div>
       </div>
-      <FooterComponent />
     </>
   );
 }

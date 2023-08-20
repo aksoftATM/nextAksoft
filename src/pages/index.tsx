@@ -4,8 +4,6 @@ import Head from "next/head";
 import DentApp from "@/assets/image/photo_2023-08-04_10-55-31.jpg";
 import Breath from "@/assets/image/61b1a4e68529d3b914d4d130d20fe7cd_640x480.jpg";
 import Cheber from "@/assets/image/iphone-640x480.jpeg";
-import { GoMoveToTop } from "react-icons/go";
-import { useRef } from "react";
 import { Header } from "@/components/module/header";
 import { Burger } from "@/components/module/burger";
 import { BannerComponent } from "@/components/module/banner";
@@ -13,6 +11,8 @@ import { FormComponent } from "@/components/module/form";
 import { CardThree } from "@/components/animation/card";
 import { ServiceComponent } from "@/components/module/cardService";
 import { FooterComponent } from "@/components/module/footer";
+import { useRef } from "react";
+import { GoMoveToTop } from "react-icons/go";
 import styles from "@/styles/home.module.css";
 
 export default function Home() {

@@ -58,14 +58,7 @@ export default function Home() {
         <div className={styles.icon_up_scroll} onClick={handleTopClick}>
           <GoMoveToTop size={50} />
         </div>
-        <div ref={onTopRef} style={{ width: "100%" }}>
-          <div className={styles.header_container}>
-            <Header />
-          </div>
-          <div className={styles.burger_container}>
-            <Burger />
-          </div>
-        </div>
+        <div ref={onTopRef} style={{ width: "100%" }}></div>
         <div
           style={{
             width: "80vw",
@@ -105,7 +98,6 @@ export default function Home() {
           </div>
         </div>
         <ServiceComponent />
-        <FooterComponent />
       </main>
     </>
   );

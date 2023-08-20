@@ -59,16 +59,6 @@
     width: 80%;
 }
 
-@media screen and (max-width: 1090px) {
-    .header_container {
-        display: none;
-    }
-    
-    .burger_container {
-        display: block;
-    }
-}
-
 @media screen and (max-width: 900px) {
    .service {
     flex-direction: column;

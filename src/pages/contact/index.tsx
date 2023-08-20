@@ -1,8 +1,5 @@
 import Head from "next/head";
 import styles from "./style.module.scss";
-import { Header } from "@/components/module/header";
-import { Burger } from "@/components/module/burger";
-import { FooterComponent } from "@/components/module/footer";
 
 export default function Contact() {
   return (
@@ -29,12 +26,6 @@ export default function Contact() {
           content="aksoft - разработка приложений"
         />
       </Head>
-      <div className={styles.header_container}>
-        <Header />
-      </div>
-      <div className={styles.burger_container}>
-        <Burger />
-      </div>
 
       <div className={styles.contact}>
         <div className={styles.contact_wrapper}>
@@ -71,7 +62,6 @@ export default function Contact() {
           <div className={styles.location}>Локация</div>
         </div>
       </div>
-      <FooterComponent />
     </>
   );
 }

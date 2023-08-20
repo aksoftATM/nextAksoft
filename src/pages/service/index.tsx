@@ -92,14 +92,8 @@ export default function Service() {
           content="aksoft - разработка приложений"
         />
       </Head>
-      <div className={styles.header_container}>
-        <Header />
-      </div>
-      <div className={styles.burger_container}>
-        <Burger />
-      </div>
+
       <h1>Наши услуги</h1>
-      {/* <ServiceComponent /> */}
       <div className={styles.service}>
         <div className={styles.navigation}>
           {data.map((item) => (
@@ -126,7 +120,6 @@ export default function Service() {
           </motion.div>
         ))}
       </div>
-      <FooterComponent />
     </div>
   );
 }

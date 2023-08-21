@@ -39,7 +39,6 @@ export default function Works() {
       onTopRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }
-  //sdfs
   return (
     <>
       <div className={styles.works_main}>
@@ -81,9 +80,9 @@ export default function Works() {
             justifyContent: "center",
             alignItems: "center",
             gap: "30px",
+            paddingTop: "100px",
           }}
         >
-          <h1>Наши работы</h1>
           <div
             style={{
               width: "100%",

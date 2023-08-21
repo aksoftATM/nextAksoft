@@ -73,6 +73,12 @@
 
 .header_container {
   width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: black;
 }
 
 .burger_container {

@@ -93,8 +93,7 @@ export default function Service() {
         />
       </Head>
 
-      <h1>Наши услуги</h1>
-      <div className={styles.service}>
+      <div className={styles.service} ref={TitleRef}>
         <div className={styles.navigation}>
           {data.map((item) => (
             <div
@@ -114,7 +113,6 @@ export default function Service() {
             initial="hidden"
             whileInView="visible"
             className={styles.text_place}
-            ref={TitleRef}
           >
             <p className={styles.title}>{item.title}</p>
           </motion.div>

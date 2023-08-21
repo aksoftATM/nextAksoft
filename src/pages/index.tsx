@@ -10,23 +10,20 @@ import { BannerComponent } from "@/components/module/banner";
 import { FormComponent } from "@/components/module/form";
 import { CardThree } from "@/components/animation/card";
 import { ServiceComponent } from "@/components/module/cardService";
-import { FooterComponent } from "@/components/module/footer";
-import { useRef } from "react";
-import { GoMoveToTop } from "react-icons/go";
+import { useEffect, useRef } from "react";
 import styles from "@/styles/home.module.css";
+import { useRouter } from "next/router";
 
 export default function Home() {
-  // const onTopRef = useRef<HTMLDivElement>(null);
-  const onFormRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [router.pathname]);
 
-  // function handleTopClick() {
-  //   if (onTopRef.current) {
-  //     onTopRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }
-  function handleFormClick() {
-    if (onFormRef.current) {
-      onFormRef.current.scrollIntoView({ behavior: "smooth" });
+  function smoothScrollTo(targetSelector: any) {
+    const targetElement = document.querySelector(targetSelector);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
     }
   }
 
@@ -55,10 +52,6 @@ export default function Home() {
         />
       </Head>
       <main className={styles.main}>
-        {/* <div className={styles.icon_up_scroll} onClick={handleTopClick}>
-          <GoMoveToTop size={50} />
-        </div> */}
-        {/* <div ref={onTopRef} style={{ width: "100%" }}></div> */}
         <div
           style={{
             width: "80vw",
@@ -68,9 +61,12 @@ export default function Home() {
             alignItems: "center",
           }}
         >
-          <BannerComponent scroll={handleFormClick} />
+          <BannerComponent scroll={smoothScrollTo} />
         </div>
-        <div style={{ width: "100%", marginBottom: "50px" }} ref={onFormRef}>
+        <div
+          style={{ width: "100%", marginBottom: "50px", paddingTop: "100px" }}
+          className="forma"
+        >
           <FormComponent />
         </div>
         <div className={styles.our_work}>

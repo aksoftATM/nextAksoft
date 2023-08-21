@@ -59,7 +59,36 @@ export default function Contact() {
               </li>
             </ul>
           </div>
-          <div className={styles.location}>Локация</div>
+          <div className={styles.location}>
+            <div className="mapouter">
+              <div className="gmap_canvas">
+                <iframe
+                  src="https://maps.google.com/maps?q=Aksoftdev&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                  id="gmap_canvas"
+                  frameBorder="0"
+                  scrolling="no"
+                  style={{ width: "100%", height: "100%" }}
+                ></iframe>
+                <style>{`
+        .mapouter {
+          position: relative;
+          text-align: right;
+          height: 100%;
+          width: 100%;
+        }
+        .gmap_canvas {
+          overflow: hidden;
+          background: none!important;
+          height: 100%;
+          width: 100%;
+        }
+      `}</style>
+                <a href="https://www.eireportingonline.com">
+                  ei reporting online
+                </a>
+              </div>
+            </div>{" "}
+          </div>
         </div>
       </div>
     </>

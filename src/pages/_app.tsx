@@ -5,9 +5,20 @@ import "@/styles/globals.css";
 import { FooterComponent } from "@/components/module/footer";
 import { Header } from "@/components/module/header";
 import { Burger } from "@/components/module/burger";
+import { useEffect } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  useEffect(() => {
+    function smoothScrollTo(targetSelector: any) {
+      const targetElement = document.querySelector(targetSelector);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "auto" });
+      }
+    }
+    smoothScrollTo(".header");
+  }, [router]);
+
   return (
     <>
       {/* // <AnimatePresence mode="wait">
@@ -31,6 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
     //       },
     //     }}
     //   > */}
+      <div className="header"></div>
       <div className="header_container">
         <Header />
       </div>

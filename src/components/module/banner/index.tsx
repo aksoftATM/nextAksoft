@@ -16,7 +16,10 @@ export const BannerComponent = ({ scroll }: any) => {
             <div className={styles.under_text}>
               <Typer text="Автоматизации бизнес-процессов с помощью современных технологии." />
             </div>
-            <button className={styles.serbn_btn} onClick={scroll}>
+            <button
+              className={styles.serbn_btn}
+              onClick={() => scroll(".forma")}
+            >
               Бесплатная консультация
             </button>
           </div>

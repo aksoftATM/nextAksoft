@@ -1,19 +1,21 @@
 "use client";
 
 import Head from "next/head";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import DentApp from "@/assets/image/photo_2023-08-04_10-55-31.jpg";
 import Breath from "@/assets/image/61b1a4e68529d3b914d4d130d20fe7cd_640x480.jpg";
 import Cheber from "@/assets/image/iphone-640x480.jpeg";
 import { GoMoveToTop } from "react-icons/go";
 import { CardThree } from "@/components/animation/card";
 import styles from "./style.module.scss";
+import { useRouter } from "next/router";
 
 export default function Works() {
   const dentappRef = useRef<HTMLDivElement>(null);
   const breathRef = useRef<HTMLDivElement>(null);
   const cheberRef = useRef<HTMLDivElement>(null);
   const onTopRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   function handleDentappClick() {
     if (dentappRef.current) {
@@ -39,6 +41,7 @@ export default function Works() {
       onTopRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }
+
   return (
     <>
       <div className={styles.works_main}>

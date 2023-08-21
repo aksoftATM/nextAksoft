@@ -9,36 +9,38 @@ import { Burger } from "@/components/module/burger";
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={router.route}
-        initial="initialState"
-        animate="animateState"
-        exit="exitState"
-        transition={{
-          duration: 0.1,
-        }}
-        variants={{
-          initialState: {
-            opacity: 0,
-          },
-          animateState: {
-            opacity: 1,
-          },
-          exitState: {
-            opacity: 0,
-          },
-        }}
-      >
-        <div className="header_container">
-          <Header />
-        </div>
-        <div className="burger_container">
-          <Burger />
-        </div>
-        <Component {...pageProps} />
-        <FooterComponent />
-      </motion.div>
-    </AnimatePresence>
+    <>
+      {/* // <AnimatePresence mode="wait">
+    //   <motion.div
+    //     key={router.route}
+    //     initial="initialState"
+    //     animate="animateState"
+    //     exit="exitState"
+    //     transition={{
+    //       duration: 0.1,
+    //     }}
+    //     variants={{
+    //       initialState: {
+    //         opacity: 0,
+    //       },
+    //       animateState: {
+    //         opacity: 1,
+    //       },
+    //       exitState: {
+    //         opacity: 0,
+    //       },
+    //     }}
+    //   > */}
+      <div className="header_container">
+        <Header />
+      </div>
+      <div className="burger_container">
+        <Burger />
+      </div>
+      <Component {...pageProps} />
+      <FooterComponent />
+      {/* </motion.div>
+      </AnimatePresence> */}
+    </>
   );
 }

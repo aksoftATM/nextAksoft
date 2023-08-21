@@ -16,14 +16,14 @@ import { GoMoveToTop } from "react-icons/go";
 import styles from "@/styles/home.module.css";
 
 export default function Home() {
-  const onTopRef = useRef<HTMLDivElement>(null);
+  // const onTopRef = useRef<HTMLDivElement>(null);
   const onFormRef = useRef<HTMLDivElement>(null);
 
-  function handleTopClick() {
-    if (onTopRef.current) {
-      onTopRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }
+  // function handleTopClick() {
+  //   if (onTopRef.current) {
+  //     onTopRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }
   function handleFormClick() {
     if (onFormRef.current) {
       onFormRef.current.scrollIntoView({ behavior: "smooth" });
@@ -55,10 +55,10 @@ export default function Home() {
         />
       </Head>
       <main className={styles.main}>
-        <div className={styles.icon_up_scroll} onClick={handleTopClick}>
+        {/* <div className={styles.icon_up_scroll} onClick={handleTopClick}>
           <GoMoveToTop size={50} />
-        </div>
-        <div ref={onTopRef} style={{ width: "100%" }}></div>
+        </div> */}
+        {/* <div ref={onTopRef} style={{ width: "100%" }}></div> */}
         <div
           style={{
             width: "80vw",

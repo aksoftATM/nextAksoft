@@ -73,6 +73,7 @@ export default function Works() {
         </div>
 
         <div
+          ref={onTopRef}
           style={{
             width: "100%",
             display: "flex",

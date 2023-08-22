@@ -76,7 +76,7 @@ export const FormComponent = () => {
     const isFNameEmpty = fName.trim() === "";
     const isFEmailEmpty = fEmail.trim() === "";
     const isFNumberEmpty = fNumber.trim() === "";
-    const isFEmailValid = fEmail.includes("@gmail.com");
+    const isFEmailValid = fEmail.includes("@");
 
     setValidation(
       isFNameEmpty || isFEmailEmpty || !isFEmailValid || isFNumberEmpty

@@ -8,6 +8,25 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        .image_container {
+
+            width: 29%;
+            transform: translateY(-40px) translateX(-20px);
+            transition: 0.5s;
+          
+            > div {
+              position: unset !important;
+            }
+          
+            .image {
+              object-fit: contain;
+              width: 100% !important;
+              position: relative !important;
+              height: unset !important;
+            }
+        }
+        .image_container:hover {
+        }
         .animation_container {
             transition: 0.6s;
             z-index: 6;
@@ -112,7 +131,7 @@
         @media screen and (max-width: 992px) {
             .form {
                 .form_wrapper {
-                    .img {
+                    .image_container {
                         width: 60%;
                     }
                     .form_title {
@@ -134,7 +153,7 @@
         @media screen and (max-width: 700px) {
             .form {
                 .form_wrapper {
-                    .img {
+                    .image_container {
                         width: 80%;
                     }
                    

@@ -1,35 +1,18 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import AnimateItem from "@/assets/animate/animation_llb2867x.json";
-import Lottie from "lottie-web";
-import PhoneImg from "@/assets/image/phone.png";
+import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import styles from "./style.module.scss";
-import Image from "next/image";
+import { Flip, ToastContainer, Zoom, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const FormComponent = () => {
   const [fName, setFName] = useState<string>("");
   const [fEmail, setFEmail] = useState<string>("");
-  const [fNumber, setFNumber] = useState<number | string>("");
-  const [fText, setFText] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
-  const AnimateContainer = useRef<any>(null);
-
-  useEffect(() => {
-    const loadAnimation = async () => {
-      await Lottie.loadAnimation({
-        container: AnimateContainer.current,
-        renderer: "svg",
-        loop: true,
-        autoplay: true,
-        animationData: AnimateItem,
-      });
-    };
-
-    loadAnimation();
-  }, []);
+  const [fNumber, setFNumber] = useState<string>("");
+  const [fText, setFText] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [validation, setValidation] = useState(false);
 
   const ResetState = () => {
     setFName("");
@@ -56,16 +39,53 @@ export const FormComponent = () => {
       .then(
         (result) => {
           console.log(result);
+          toast.success("Заявка успешно отправлена !", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: 0,
+            theme: "dark",
+            transition: Zoom,
+          });
           ResetState();
         },
         (error) => {
           console.log(error);
+          toast.error("Что-то пошло не так попытайтесь по позже !", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: 0,
+            theme: "dark",
+            transition: Flip,
+          });
           ResetState();
         }
       );
   };
+
+  useEffect(() => {
+    const isFNameEmpty = fName.trim() === "";
+    const isFEmailEmpty = fEmail.trim() === "";
+    const isFNumberEmpty = fNumber.trim() === "";
+    const isFEmailValid = fEmail.includes("@gmail.com");
+
+    setValidation(
+      isFNameEmpty || isFEmailEmpty || !isFEmailValid || isFNumberEmpty
+    );
+  }, [fName, fEmail, fNumber]);
+
+  console.log(validation);
+
   return (
     <>
+      <ToastContainer />
       <div className={styles.form}>
         <div className={styles.form_wrapper}>
           <div className={styles.form_title}>
@@ -76,12 +96,14 @@ export const FormComponent = () => {
             <div className={styles.top_inp}>
               <input
                 className={styles.input}
+                value={fName}
                 type="text"
                 placeholder="Имя"
                 onChange={(e) => setFName(e.target.value)}
               />
               <input
                 className={styles.input}
+                value={fEmail}
                 type="text"
                 placeholder="E-mail"
                 onChange={(e) => setFEmail(e.target.value)}
@@ -89,19 +111,31 @@ export const FormComponent = () => {
             </div>
             <input
               className={styles.input}
-              type="text"
+              value={fNumber}
+              type="number"
               placeholder="Номер телефона"
               onChange={(e) => setFNumber(e.target.value)}
             />
             <input
               className={styles.input}
+              value={fText}
               type="text"
               placeholder="Сопроводительное письмо"
               onChange={(e) => setFText(e.target.value)}
             />
           </div>
-          <button className={styles.form_btn} onClick={sendEmail}>
-            Отправить
+          <button
+            className={styles.form_btn}
+            onClick={sendEmail}
+            disabled={validation}
+          >
+            {!isLoading ? (
+              <span>Отправить</span>
+            ) : (
+              <svg viewBox="25 25 50 50">
+                <circle r="20" cy="50" cx="50"></circle>
+              </svg>
+            )}
           </button>
         </div>
       </div>

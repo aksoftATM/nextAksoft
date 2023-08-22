@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import emailjs from "emailjs-com";
-import styles from "./style.module.scss";
 import { Flip, ToastContainer, Zoom, toast } from "react-toastify";
+import Iphone from "@/assets/image/phone.png";
+import emailjs from "emailjs-com";
+import Image from "next/image";
+import styles from "./style.module.scss";
 import "react-toastify/dist/ReactToastify.css";
 
 export const FormComponent = () => {
@@ -91,7 +93,14 @@ export const FormComponent = () => {
           <div className={styles.form_title}>
             <h1 className={styles.h1}>Оставить заявку</h1>
           </div>
-
+          <div className={styles.image_container}>
+            <Image
+              src={Iphone.src}
+              layout="fill"
+              alt=""
+              className={styles.image}
+            />
+          </div>
           <div className={styles.inp_place}>
             <div className={styles.top_inp}>
               <input

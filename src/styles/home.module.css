@@ -49,6 +49,6 @@
       display: none;
     }
     .burger_container {
-      display: block;
+      display: block !important;
     }
   }

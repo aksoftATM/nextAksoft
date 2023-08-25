@@ -28,18 +28,18 @@ export default function About() {
   return (
     <div>
       <Head>
-        <title>aksofts info</title>
+        <title>Информация о компании - aksoft</title>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE-edge" />
         <base href="aksoft.dev" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="Разработка приложений и сайтов aksoft, автоматизация бизнес машин"
+          content="Компания aksoft - был основан 2022 году, основное направление разработка современных веб приложений и автоматизация бизнес задач"
         />
         <meta
           name="keywords"
-          content="разработка приложений, разработка сайтов, разработка сайтов бишкек, разработка приложений бишкек, автоматизация бизнеса"
+          content="разработка приложений, разработка сайта, разработка сайтов бишкек, разработка приложений бишкек, автоматизация бизнеса"
         />
         <meta property="og:title" content="Разработка приложений" />
         <meta property="og:type" content="website" />

@@ -46,7 +46,7 @@ export default function Works() {
     <>
       <div className={styles.works_main}>
         <Head>
-          <title>aksofts works</title>
+          <title>aksoft - наши работы</title>
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE-edge" />
           <base href="aksoft.dev" />

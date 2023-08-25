@@ -38,7 +38,7 @@ const AnimatedCharacters: React.FC<AnimatedCharactersProps> = ({
     visible: {
       y: 0,
       color: "#FFF",
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.7 },
     },
   };
 
@@ -76,6 +76,7 @@ const AnimatedCharacters: React.FC<AnimatedCharactersProps> = ({
                     style={{ display: "inline-block" }}
                     variants={item}
                     className={styles.text_animate}
+                    viewport={{ amount: 1, once: true }}
                   >
                     {element}
                   </motion.span>

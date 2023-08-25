@@ -134,7 +134,7 @@ export function CardThree({
               zIndex: "0",
             }}
           >
-            <h1 style={{ color: "white" }}>{name}</h1>
+            <h2 style={{ color: "white" }}>{name}</h2>
             <p
               style={{
                 fontSize: "16px",

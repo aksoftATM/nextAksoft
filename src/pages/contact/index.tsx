@@ -10,13 +10,14 @@ export default function Contact() {
         <meta httpEquiv="X-UA-Compatible" content="IE-edge" />
         <base href="aksoft.dev" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta httpEquiv="Content-Language" content="ru" />
         <meta
           name="description"
           content="Разработка приложений и сайтов aksoft, автоматизация бизнес машин"
         />
         <meta
           name="keywords"
-          content="разработка приложений, разработка сайтов, разработка сайтов бишкек, разработка приложений бишкек, автоматизация бизнеса"
+          content="aksoft контакты, разработка сайтов, разработка сайтов бишкек, разработка приложений бишкек, автоматизация бизнеса,Веб-разработка в Бишкеке,Разработка сайтов Бишкек,Создание CRM приложений,Профессиональные сайты и CRM,Разработка веб-приложений,Оптимизация бизнес-процессов,Адаптивный дизайн сайтов,Лучшие CRM решения,Цифровые решения для бизнеса,Комплексное веб-продвижение,Кастомные CRM инструменты,Интеграция CRM и сайтов,Решения для эффективного управления клиентами,Мобильные CRM приложения,Веб-технологии для бизнеса,Компания по разработке сайтов и CRM,Управление продажами и клиентами,Индивидуальный дизайн и разработка"
         />
         <meta property="og:title" content="Разработка приложений" />
         <meta property="og:type" content="website" />
@@ -55,7 +56,12 @@ export default function Contact() {
               </li>
               <li className={styles.contact_item}>
                 <h4>Соц. сети</h4>
-                <h5>Instagram aksoftdev</h5>
+                <h5>
+                  Instagram{" "}
+                  <a href="https://www.instagram.com/aksoftdev/" target="blank">
+                    aksoftdev
+                  </a>
+                </h5>
               </li>
             </ul>
           </div>

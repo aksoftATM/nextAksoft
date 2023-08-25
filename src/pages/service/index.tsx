@@ -76,13 +76,14 @@ export default function Service() {
         <meta httpEquiv="X-UA-Compatible" content="IE-edge" />
         <base href="aksoft.dev" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta httpEquiv="Content-Language" content="ru" />
         <meta
           name="description"
           content="Разработка приложений и сайтов aksoft, автоматизация бизнес машин"
         />
         <meta
           name="keywords"
-          content="разработка приложений, разработка сайтов, разработка сайтов бишкек, разработка приложений бишкек, автоматизация бизнеса"
+          content="aksoft услуги, разработка сайтов, разработка сайтов бишкек, разработка приложений бишкек, автоматизация бизнеса,Веб-разработка в Бишкеке,Разработка сайтов Бишкек,Создание CRM приложений,Профессиональные сайты и CRM,Разработка веб-приложений,Оптимизация бизнес-процессов,Адаптивный дизайн сайтов,Лучшие CRM решения,Цифровые решения для бизнеса,Комплексное веб-продвижение,Кастомные CRM инструменты,Интеграция CRM и сайтов,Решения для эффективного управления клиентами,Мобильные CRM приложения,Веб-технологии для бизнеса,Компания по разработке сайтов и CRM,Управление продажами и клиентами,Индивидуальный дизайн и разработка"
         />
         <meta property="og:title" content="Разработка приложений" />
         <meta property="og:type" content="website" />
@@ -93,7 +94,7 @@ export default function Service() {
         />
       </Head>
 
-      <div className={styles.service} ref={TitleRef}>
+      <div className={styles.service}>
         <div className={styles.navigation}>
           {data.map((item) => (
             <div
@@ -113,6 +114,7 @@ export default function Service() {
             initial="hidden"
             whileInView="visible"
             className={styles.text_place}
+            ref={TitleRef}
           >
             <p className={styles.title}>{item.title}</p>
           </motion.div>

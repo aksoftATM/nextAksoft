@@ -40,7 +40,6 @@ export const FormComponent = () => {
       )
       .then(
         (result) => {
-          console.log(result);
           toast.success("Заявка успешно отправлена !", {
             position: "top-center",
             autoClose: 3000,
@@ -55,7 +54,6 @@ export const FormComponent = () => {
           ResetState();
         },
         (error) => {
-          console.log(error);
           toast.error("Что-то пошло не так попытайтесь по позже !", {
             position: "top-center",
             autoClose: 3000,
@@ -83,15 +81,13 @@ export const FormComponent = () => {
     );
   }, [fName, fEmail, fNumber]);
 
-  console.log(validation);
-
   return (
     <>
       <ToastContainer />
       <div className={styles.form}>
         <div className={styles.form_wrapper}>
           <div className={styles.form_title}>
-            <h1 className={styles.h1}>Оставить заявку</h1>
+            <h2 className={styles.h1}>Оставить заявку</h2>
           </div>
           <div className={styles.image_container}>
             <Image

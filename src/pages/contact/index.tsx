@@ -79,7 +79,7 @@ export default function Contact() {
           <div className={styles.location}>
             <div className="mapouter">
               <div className="gmap_canvas">
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab1b8e6820158e06920c9462510cdf8245f0259237a54e040c6093047fbc22a95&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab1b8e6820158e06920c9462510cdf8245f0259237a54e040c6093047fbc22a95&amp;source=constructor" width="500" height="400" frameBorder="0"></iframe>
                 <style>{`
         .mapouter {
           position: relative;

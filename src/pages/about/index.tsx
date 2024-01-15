@@ -49,8 +49,6 @@ export default function About() {
         variants={container}>
         <h1>О компании Aksoft</h1>
 
-        <div class="columns">
-
         <div>
 
         <h3>Наша миссия - воплощать самые смелые идеи в цифровой жизнь!</h3>
@@ -73,7 +71,7 @@ export default function About() {
         </ul>
 
         </div>
-        </div>
+
 
         <p>Мы готовы стать вашим технологическим партнером и воплотить любые идеи в жизнь - от сайтов до веб и мобильных приложений.</p>
 

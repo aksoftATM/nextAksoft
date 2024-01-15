@@ -4,7 +4,7 @@ parameters:
   docker-container:
     type: string
     default: "aksoft-main"
-    description: Aksoft next deploy'
+    description: Aksoft next First'
 
 jobs:
   deploy-to-dev:

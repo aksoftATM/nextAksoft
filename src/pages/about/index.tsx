@@ -77,7 +77,7 @@ export default function About() {
 
         <p>Мы готовы стать вашим технологическим партнером и воплотить любые идеи в жизнь - от сайтов до веб и мобильных приложений.</p>
 
-        <a href="/contact" class="button">Связаться с нами</a>
+        
         {/* {placeholderText.map((item, index) => (
           <AnimatedCharacters key={index} {...item} />
         ))} */}

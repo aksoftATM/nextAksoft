@@ -125,7 +125,7 @@ export const FormComponent = () => {
               className={styles.input}
               value={fText}
               type="text"
-              placeholder="Сопроводительное письмо"
+              placeholder="Описание"
               onChange={(e) => setFText(e.target.value)}
             />
           </div>

@@ -30,38 +30,27 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>aksoft - Разработка веб приложений Бишкек</title>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE-edge" />
         <base href="aksoft.dev" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta httpEquiv="Content-Language" content="ru" />
-        <meta
-          name="description"
-          content="Разработка приложений и сайтов, Современное решение для автоматизации бизнес задач.
-                    Индивидуальное решение под ваши нужды"
-        />
-        <meta
-          name="keywords"
-          content="Веб приложение Бишкек, aksoft, разработка приложений, разработка сайтов, разработка 
-          сайтов бишкек, разработка приложений бишкек, автоматизация бизнеса,Веб-разработка в Бишкеке,
-          Разработка сайтов Бишкек,Создание CRM приложений,Профессиональные сайты и CRM,
-          Разработка веб-приложений,Оптимизация бизнес-процессов,Адаптивный дизайн сайтов,
-          Лучшие CRM решения,Цифровые решения для бизнеса,Комплексное веб-продвижение,
-          Кастомные CRM инструменты,Интеграция CRM и сайтов,Решения для эффективного 
-          управления клиентами,Мобильные CRM приложения,Веб-технологии для бизнеса,
-          Компания по разработке сайтов и CRM,Управление продажами и клиентами,Индивидуальный дизайн и разработка"
-        />
-        <meta
-          property="og:title"
-          content="Разработка веб приложении для автоматизации бизнеса"
-        />
+        <title>Aksoft - разработка сайтов, CRM, приложений в Бишкеке</title>
+        <meta name="description" content="Компания Aksoft предлагает разработку сайтов, 
+        CRM систем, мобильных приложений под Android и iOS, а также автоматизацию 
+        бизнеса в Бишкеке. Работаем с передовыми технологиями, гарантируем высокое качество."></meta>
+        <meta name="keywords" content="разработка сайтов Бишкек, разработка CRM Бишкек, приложения под Android,
+         приложения под iOS, автоматизация бизнеса, разработка приложений, Создание CRM систем, мобильное приложение для продажи,
+         Аренда инструментов, Продажа в рассрочку, интегрированные сайты "></meta>
+         <meta property="og:title" content="Разработка сайтов, CRM и мобильных приложений"></meta>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://aksoft.dev/" />
         <meta
           property="og:site_name"
-          content="aksoft - разработка приложений Бишкек"
+          content="Aksoft - разработка мобильного приложения Бишкек"
         />
+        <meta name="robots" content="index, follow"></meta>
+        <link rel="canonical" href="https://aksoft.dev/"></link>
       </Head>
       <main className={styles.main}>
         <div

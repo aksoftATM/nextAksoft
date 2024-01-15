@@ -74,11 +74,11 @@ workflows:
           filters:
             branches:
               only:
-                - development
+                - main
       - transfer-and-run:
           requires:
             - deploy-to-dev
           filters:
             branches:
               only:
-                - development
+                - main

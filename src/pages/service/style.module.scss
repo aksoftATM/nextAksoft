@@ -59,7 +59,6 @@
   .service {
     flex-direction: column;
     padding: 50px;
-    
   }
   .navigation {
     flex-direction: row;
@@ -71,7 +70,10 @@
 @media screen and (max-width: 800px) {
   .service {
     flex-direction: column;
-    padding: 50px;
+    padding: 30px;
+  }
+  .title {
+    width: 100%;
   }
   .navigation {
     flex-direction: column;

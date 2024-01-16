@@ -91,6 +91,7 @@ export default function Home() {
             gap: "40px",
             maxWidth: "1100px",
             fontSize: "18px",
+            padding: "0 20px 0 20px",
           }}
           className="forma"
         >

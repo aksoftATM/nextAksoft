@@ -4,9 +4,6 @@ import { FaLaptopCode } from "react-icons/fa";
 import { TbDeviceMobileCode, TbSettingsAutomation } from "react-icons/tb";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { motion } from "framer-motion";
-import { FooterComponent } from "@/components/module/footer";
-import { Burger } from "@/components/module/burger";
-import { Header } from "@/components/module/header";
 import styles from "./style.module.scss";
 
 export default function Service() {

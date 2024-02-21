@@ -18,7 +18,7 @@ export const FooterComponent = () => {
         <Link href="/" className={styles.footer_logo}>
           <h1 className={styles.logo}>aksoft</h1>
           <span className={styles.footer_sub_text}>
-            © 2023 aksoft <br /> Все права защищены.
+            © 2024 aksoft <br /> Все права защищены.
           </span>
         </Link>
         <ul className={styles.menu_list}>

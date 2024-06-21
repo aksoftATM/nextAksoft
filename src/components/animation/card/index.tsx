@@ -118,7 +118,7 @@ export function CardThree({
         <div className={styles.relative_container}>
           <div
             className={styles.image}
-            style={{ backgroundImage: `url(${image.src})` }}
+            style={{ backgroundImage: `url(${image.src ? image.src: image})` }}
           />
           <div
             style={{

@@ -1,0 +1,20 @@
+.container{
+    width: 100%;
+    height: calc(100vh - 90px);
+    margin-top: 90px;
+    padding: 40px 40px 50px 100px;
+    overflow-y: scroll;
+}
+
+.title{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.content{
+    color: white;
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 20px;
+}

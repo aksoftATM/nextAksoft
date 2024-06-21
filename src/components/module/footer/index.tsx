@@ -25,6 +25,9 @@ export const FooterComponent = () => {
           <Link href="/">
             <li className={styles.menu_item}>Главная</li>
           </Link>
+          <Link href="/news">
+              <li className={styles.menu_item}>Новости</li>
+            </Link>
           <Link href="/works">
             <li className={styles.menu_item}>Наши работы</li>
           </Link>

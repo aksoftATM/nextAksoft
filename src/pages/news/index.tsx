@@ -33,8 +33,8 @@ export default function News() {
       <h3 className={styles.title}>{data?.title}</h3>
       <p>{data?.description}</p>
       <div className={styles.fit}>
-      {data?.newsCard?.map((item: any) => (
-        <Link href={`/news/${item.id}`}>
+      {data?.newsCard?.map((item: any, index: number) => (
+        <Link key={index} href={`/news/${item.id}`}>
           <CardThree
             image={`https://aksoft.dev/max/${item.image.data.attributes.formats.small.url}`}
             name={item.title_inner}

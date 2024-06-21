@@ -32,6 +32,7 @@ export default function News() {
     <div className={styles.container}>
       <h3 className={styles.title}>{data?.title}</h3>
       <p>{data?.description}</p>
+      <div className={styles.fit}>
       {data?.newsCard?.map((item: any) => (
         <Link href={`/news/${item.id}`}>
           <CardThree
@@ -41,6 +42,7 @@ export default function News() {
           />
         </Link>
       ))}
+      </div>
     </div>
   );
 }

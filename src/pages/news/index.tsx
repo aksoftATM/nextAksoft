@@ -29,19 +29,21 @@ export default function News() {
   console.log(data, "this is data");
 
   return (
-    <div className={styles.container}>
+    <div className={styles.main}>
+      <div className={styles.container}>
       <h3 className={styles.title}>{data?.title}</h3>
       <p>{data?.description}</p>
-      <div className={styles.fit}>
-      {data?.newsCard?.map((item: any, index: number) => (
-        <Link key={index} href={`/news/${item.id}`}>
-          <CardThree
-            image={`https://aksoft.dev/max/${item.image.data.attributes.formats.small.url}`}
-            name={item.title_inner}
-            title={item.short_description}
-          />
-        </Link>
-      ))}
+        <div className={styles.fit}>
+          {data?.newsCard?.map((item: any, index: number) => (
+            <Link key={index} href={`/news/${item.id}`}>
+              <CardThree
+                image={`https://aksoft.dev/max/${item.image.data.attributes.formats.small.url}`}
+                name={item.title_inner}
+                title={item.short_description}
+              />
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

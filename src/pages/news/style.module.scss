@@ -1,9 +1,17 @@
 .container{
-    width: 100%;
+    width: 80%;
     height: calc(100vh - 90px);
     margin-top: 90px;
-    padding: 40px 40px 50px 100px;
+    padding: 0 auto;
     overflow-y: scroll;
+}
+
+.main{
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 20px;
 }
 
 .title{
@@ -22,4 +30,22 @@
 .fit{
     display: flex;
     flex-wrap: wrap;
+}
+
+.content img{
+    width: 100% !important;
+    height: auto;
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 450px){
+    .container{
+        width: 97%;
+    }
 }

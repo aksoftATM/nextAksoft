@@ -10,8 +10,8 @@ export default function AboutNews() {
   const url = `https://aksoft.dev/max/api/news?populate=*`;
 
   useEffect(() => {
-      if(id){
-        fetch(url)
+    if (id) {
+      fetch(url)
         .then((response) => {
           if (!response.ok) {
             throw new Error(
@@ -21,25 +21,38 @@ export default function AboutNews() {
           return response.json();
         })
         .then((response) => {
-          const state = response.data[0].attributes.newsCard.filter((item: any) => item.id === Number(id))
-          console.log(state[0], 'this is state')
-          setData(state[0])
+          const state = response.data[0].attributes.newsCard.filter(
+            (item: any) => item.id === Number(id)
+          );
+          console.log(state[0], "this is state");
+          setData(state[0]);
         })
         .catch((error) => {
           console.error("There was a problem with the fetch operation:", error);
         });
-      }
+    }
   }, [id]);
 
   const BlogContent = ({ htmlString }: any) => {
-    return <div className={styles.content} dangerouslySetInnerHTML={{ __html: htmlString }} />;
+    return (
+      <div
+        className={styles.content}
+        dangerouslySetInnerHTML={{ __html: htmlString }}
+      />
+    );
   };
 
+  console.log(data?.news_inner, "this is news");
+
   return (
-    <div className={styles.container}>
-      <h3 className={styles.title}>{data?.title_inner}</h3>
-      <p>{data?.short_description}</p>
-      <BlogContent htmlString={data?.news_inner} />
+    <div className={styles.main}>
+      <div className={styles.container}>
+        <h3 className={styles.title}>{data?.title_inner}</h3>
+        <p>{data?.short_description}</p>
+        <div className={styles.content}>
+          <BlogContent htmlString={data?.news_inner} />
+        </div>
+      </div>
     </div>
   );
 }

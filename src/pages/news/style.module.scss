@@ -36,6 +36,14 @@
     width: 100% !important;
     height: auto;
 }
+.content ol{
+    padding-left: 10px;
+}
+
+.content > ol > li::before{
+    content: "- ";
+}
+    
 
 @media (max-width: 768px){
     .container{

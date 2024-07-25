@@ -11,11 +11,26 @@ export default function Service() {
 
   function handleDentappClick() {
     if (TitleRef.current) {
-      (TitleRef.current as HTMLElement).scrollIntoView({
+      const headerHeight = 200;
+      const element = TitleRef.current as HTMLElement;
+      
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerHeight;
+  
+      element.scrollIntoView({
         behavior: "smooth",
+        block: "end",
       });
+  
+      setTimeout(() => {
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }, 300);
     }
   }
+  
 
   const [data, setData] = useState([
     {

@@ -1,123 +1,131 @@
-
-
 .burger {
-    width: 100%;
-    padding: 15px 50px;
-    z-index: 5;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    .burger_icon {
-      cursor: pointer;
-    }
-    .burger_logo {
-        .logo_head {
-            color: hsl(0, 0%, 28%);
-            font-size: 45px;
-            font-weight: bold!important;
-            letter-spacing: 7px!important;
-            cursor: pointer;
-            text-transform: lowercase !important;
-            background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shines 12s infinite linear;
-        }
-        
-        @keyframes shines {
-          0% {
-            background-position: 0;
-          }
-        
-          100% {
-            background-position: 700px; 
-          }
-        }
-    }
+	width: 100%;
+	padding: 15px 50px;
+	z-index: 5;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	.burger_icon {
+		cursor: pointer;
+	}
+	.burger_logo {
+		.logo_head {
+			color: hsl(0, 0%, 28%);
+			font-size: 45px;
+			font-weight: bold !important;
+			letter-spacing: 7px !important;
+			cursor: pointer;
+			text-transform: lowercase !important;
+			background: linear-gradient(
+				to right,
+				hsl(0, 0%, 30%) 0,
+				hsl(0, 0%, 100%) 10%,
+				hsl(0, 0%, 30%) 20%
+			);
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			animation: shines 12s infinite linear;
+		}
+
+		@keyframes shines {
+			0% {
+				background-position: 0;
+			}
+
+			100% {
+				background-position: 700px;
+			}
+		}
+	}
 }
 
 .drawer_wrapper {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  .cross {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    z-index: 50;
-  }
-    .burger_logo {
-        .logo_animate {
-            color: hsl(0, 0%, 28%);
-            font-size: 45px;
-            font-weight: bold!important;
-            letter-spacing: 7px!important;
-            cursor: pointer;
-            text-transform: uppercase !important;
-            padding: 64px;
-            background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shiness 12s infinite linear;
-        }
-        
-          @keyframes shiness {
-            0% {
-              background-position: 0;
-            }
-            60% {
-              background-position: 600px;
-            }
-            100% {
-              background-position: 700px;
-            }
-          }
-    }
-    .menu_list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: baseline;
-        gap: 30px;
-        
-        .menu_item {
-            font-size: 28px;
-            background-image: linear-gradient(
-              to right,
-              #727272,
-              #727272 50%,
-              #fff 50%
-            );
-            background-size: 200% 100%;
-            background-position: -100%;
-            display: inline-block;
-            padding: 5px 0;
-            position: relative;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all 0.3s ease-in-out;
-          }
-          
-          .menu_item:before{
-            content: '';
-            background: #727272;
-            display: block;
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            transition: all 0.3s ease-in-out;
-          }
-          
-          .menu_item:hover {
-           background-position: 0;
-          }
-          
-          .menu_item:hover::before{
-            width: 100%;
-          }
-    }
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	.cross {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		z-index: 50;
+	}
+	.burger_logo {
+		.logo_animate {
+			color: hsl(0, 0%, 28%);
+			font-size: 45px;
+			font-weight: bold !important;
+			letter-spacing: 7px !important;
+			cursor: pointer;
+			text-transform: uppercase !important;
+			padding: 64px;
+			background: linear-gradient(
+				to right,
+				hsl(0, 0%, 30%) 0,
+				hsl(0, 0%, 100%) 10%,
+				hsl(0, 0%, 30%) 20%
+			);
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			animation: shiness 12s infinite linear;
+		}
+
+		@keyframes shiness {
+			0% {
+				background-position: 0;
+			}
+			60% {
+				background-position: 600px;
+			}
+			100% {
+				background-position: 700px;
+			}
+		}
+	}
+	.menu_list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: baseline;
+		gap: 30px;
+
+		.menu_item {
+			font-size: 28px;
+			background-image: linear-gradient(
+				to right,
+				#727272,
+				#727272 50%,
+				#fff 50%
+			);
+			background-size: 200% 100%;
+			background-position: -100%;
+			display: inline-block;
+			padding: 5px 0;
+			position: relative;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.menu_item:before {
+			content: "";
+			background: #727272;
+			display: block;
+			position: absolute;
+			bottom: -3px;
+			left: 0;
+			width: 0;
+			height: 3px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.menu_item:hover {
+			background-position: 0;
+		}
+
+		.menu_item:hover::before {
+			width: 100%;
+		}
+	}
 }

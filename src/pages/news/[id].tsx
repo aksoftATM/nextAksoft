@@ -6,6 +6,7 @@ import styles from "./style.module.scss";
 
 export default function AboutNews() {
   const [data, setData] = useState<any>({});
+  const router = useRouter();
   const { id } = useRouter().query;
   const url = `https://aksoft.dev/max/api/news?populate=*`;
 
@@ -42,13 +43,18 @@ export default function AboutNews() {
     );
   };
 
-  console.log(data?.news_inner, "this is news");
+  const handleGoForward = ()=> {
+    router.push("/news")
+  }
+
+  console.log(data?.news_inner, "this is news mufa");
 
   return (
     <div className={styles.main}>
       <div className={styles.container}>
+        <h2  onClick={handleGoForward} className={styles.h2}>Новости : {data?.title_inner}</h2>
         <h3 className={styles.title}>{data?.title_inner}</h3>
-        <p>{data?.short_description}</p>
+        <p className={styles.text_p}>{data?.short_description}</p>
         <div className={styles.content}>
           <BlogContent htmlString={data?.news_inner} />
         </div>

@@ -1,59 +1,76 @@
-.container{
-    width: 80%;
-    height: calc(100vh - 90px);
-    margin-top: 90px;
-    padding: 0 auto;
-    overflow-y: scroll;
+.container {
+	width: 80%;
+	height: calc(100vh - 90px);
+	padding-top: 90px;
+	padding: 0 auto;
+	overflow-y: scroll;
 }
 
-.main{
-    width: 100%; 
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    margin-top: 20px;
+.main {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	margin-top: 20px;
+}
+.h2{
+	cursor: pointer;
+	font-size: 18px;
+	padding: 5px;
 }
 
-.title{
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20px;
+.title {
+	font-size: 28px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.text_p{
+	text-align: center;
+	font-size: 15px;
+}
+.params {
+	text-align: center;
+    font-size: 14px;
+    padding: 0px 10px, ;
 }
 
-.content{
-    color: white;
-    font-size: 15px;
-    line-height: 30px;
-    margin-top: 20px;
+.content {
+	color: white;
+	font-size: 15px;
+	line-height: 30px;
+	margin-top: 20px;
+	text-align: center;
+	padding: 5px;
 }
 
-.fit{
-    display: flex;
-    flex-wrap: wrap;
+.fit {
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.content img{
-    width: 100% !important;
-    height: auto;
+.content img {
+	width: 100% !important;
+	height: auto;
 }
-.content ol{
-    padding-left: 10px;
-}
-
-.content > ol > li::before{
-    content: "- ";
-}
-    
-
-@media (max-width: 768px){
-    .container{
-        width: 90%;
-    }
-
+.content ol {
+	padding-left: 10px;
 }
 
-@media (max-width: 450px){
-    .container{
-        width: 97%;
-    }
+.content > ol > li::before {
+	content: "- ";
+}
+
+@media (max-width: 768px) {
+	.container {
+		width: 90%;
+		padding-top: 0;
+	}
+}
+
+@media (max-width: 450px) {
+	.container {
+		width: 97%;
+		padding-top: 0;
+	}
 }

@@ -5,7 +5,6 @@ import { TbDeviceMobileCode, TbSettingsAutomation } from "react-icons/tb";
 import { MdOutlineDesignServices } from "react-icons/md";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Description from "../title";
 import styles from "./style.module.scss";
 
 interface ServiceItem {
@@ -14,16 +13,17 @@ interface ServiceItem {
 	name: string;
 	title: string;
 	description: string;
+	text: string
 }
 
 export default function Service() {
 	const TitleRef = useRef<HTMLDivElement>(null);
 	const router = useRouter();
 
-	function handleDentappClick(name: string, title: string) {
+	function handleDentappClick(text: string, title: string) {
 		localStorage.setItem("serviceTitle", title);
 		router.push({
-			pathname: `/service/${name}`,
+			pathname: `/service/${text}`,
 		});
 
 		if (TitleRef.current) {
@@ -51,6 +51,7 @@ export default function Service() {
 	const [data] = useState<ServiceItem[]>([
 		{
 			id: 1,
+			text: "web_development",
 			icon: <FaLaptopCode size={70} />,
 			name: "Веб разработка",
 			title: `Мы - энергичная и талантливая команда веб-разработчиков, предлагаем 
@@ -75,6 +76,7 @@ export default function Service() {
 		},
 		{
 			id: 3,
+			text: "design_development",
 			icon: <MdOutlineDesignServices size={70} />,
 			name: "Разработка дизайна",
 			title: `Дизайн – это не просто оформление, это стратегический инструмент, 
@@ -131,6 +133,7 @@ export default function Service() {
 		},
 		{
 			id: 2,
+			text: "mobile_application_development",
 			icon: <TbDeviceMobileCode size={70} />,
 			name: "Разработка мобильных приложений",
 			title: `В современном мире смартфоны и планшеты стали неотъемлемой 
@@ -195,6 +198,7 @@ export default function Service() {
 		},
 		{
 			id: 4,
+			text: "automation_of_business_processes",
 			icon: <TbSettingsAutomation size={70} />,
 			name: "Автоматизация бизнес процессов",
 			title: `В современном мире, где конкуренция на рынках постоянно возрастает, 
@@ -253,6 +257,7 @@ export default function Service() {
 		},
 		{
 			id: 5,
+			text: "CRM",
 			icon: <TbSettingsAutomation size={70} />,
 			name: " Индивидуальные CRM-системы",
 			title: `Индивидуальные CRM-системы: Персонализированные решения для эффективного 
@@ -348,7 +353,7 @@ export default function Service() {
 									<span className={styles.icon}>{item.icon}</span>
 									<span
 										onClick={() => {
-											handleDentappClick(item.name, item.title);
+											handleDentappClick(item.text, item.title);
 										}}
 										className={styles.name}>
 										{item.name}

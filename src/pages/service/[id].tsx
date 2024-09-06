@@ -6,12 +6,12 @@ import Head from "next/head";
 import styles from "./style.module.scss";
 
 interface QueryParams {
-	name?: string;
+	text?: string;
 }
 
 const ServiceAbout: NextPage = () => {
 	const router = useRouter();
-	const { name } = router.query as QueryParams;
+	const { text } = router.query as QueryParams;
 
 	const [title, setTitle] = useState<string>("");
 
@@ -23,11 +23,10 @@ const ServiceAbout: NextPage = () => {
 	}, []);
 
 	useEffect(() => {
-    document.title = `Aksoft | ${name || 'Загрузка...'}`;
+    document.title = `Aksoft | ${text || 'Загрузка...'}`;
 		
-}, [name]);
+}, [text]);
 
-// console.log(document.title);
 
 
 	const formattedTitle = title.split(".").map((sentence, index) => (
@@ -40,7 +39,7 @@ const ServiceAbout: NextPage = () => {
 	return (
 		<div className={styles.lox}>
 			<Head>
-				<title>Aksoft | {name ? name : "Загрузка..."}</title>
+				<title>Aksoft | {text ? text : "Загрузка..."}</title>
 				<meta charSet="UTF-8" />
 				<meta httpEquiv="X-UA-Compatible" content="IE-edge" />
 				<base href="aksoft.dev" />

@@ -20,8 +20,9 @@ export default function Service() {
 	const TitleRef = useRef<HTMLDivElement>(null);
 	const router = useRouter();
 
-	function handleDentappClick(text: string, title: string) {
+	function handleDentappClick(text: string, title: string, name: string) {
 		localStorage.setItem("serviceTitle", title);
+		localStorage.setItem("serviceName", name);
 		router.push({
 			pathname: `/service/${text}`,
 		});
@@ -353,7 +354,7 @@ export default function Service() {
 									<span className={styles.icon}>{item.icon}</span>
 									<span
 										onClick={() => {
-											handleDentappClick(item.text, item.title);
+											handleDentappClick(item.text, item.title, item.name);
 										}}
 										className={styles.name}>
 										{item.name}

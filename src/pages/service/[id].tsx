@@ -14,20 +14,22 @@ const ServiceAbout: NextPage = () => {
 	const { text } = router.query as QueryParams;
 
 	const [title, setTitle] = useState<string>("");
+	const [name, setName] = useState<string>("");
 
 	useEffect(() => {
 		const storedTitle = localStorage.getItem("serviceTitle");
+		const storedName = localStorage.getItem("serviceName");
 		if (storedTitle) {
 			setTitle(storedTitle);
+		}
+		if (storedName) {
+			setName(storedName);
 		}
 	}, []);
 
 	useEffect(() => {
-    document.title = `Aksoft | ${text || 'Загрузка...'}`;
-		
-}, [text]);
-
-
+		document.title = `Aksoft | ${text || "Загрузка..."}`;
+	}, [text]);
 
 	const formattedTitle = title.split(".").map((sentence, index) => (
 		<span key={index}>
@@ -52,9 +54,12 @@ const ServiceAbout: NextPage = () => {
 				<meta name="robots" content="index, follow"></meta>
 				<meta name="author" content="AKSOFT"></meta>
 			</Head>
-			<button onClick={() => router.push("/service")}>
-				<FaArrowLeftLong color="white" />
-			</button>
+			<div className={styles.box}>
+				<button onClick={() => router.push("/service")}>
+					<FaArrowLeftLong color="white" />
+				</button>
+				<p>{name}</p>
+			</div>
 			<p>{formattedTitle}</p>
 		</div>
 	);

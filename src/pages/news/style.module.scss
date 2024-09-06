@@ -1,6 +1,6 @@
 .container {
 	width: 80%;
-	height: calc(100vh - 90px);
+	min-height: calc(100vh - 90px);
 	padding-top: 90px;
 	padding: 0 auto;
 	overflow-y: scroll;
@@ -17,6 +17,10 @@
 	cursor: pointer;
 	font-size: 18px;
 	padding: 5px;
+
+	svg{
+		top: 4px;
+	}
 }
 
 .title {

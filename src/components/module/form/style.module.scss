@@ -11,7 +11,7 @@
 		.image_container {
 			width: 29%;
 			transform: translateY(-40px) translateX(-20px);
-			transition: 0.5s;
+			transition: transform 0.5s ease-in-out;
 
 			> div {
 				position: unset !important;
@@ -22,10 +22,14 @@
 				width: 100% !important;
 				position: relative !important;
 				height: unset !important;
+				transition: transform 0.5s ease-in-out;
 			}
 		}
-		.image_container:hover {
+
+		.image_container:hover .image {
+			transform: rotateY(160deg);
 		}
+
 		.animation_container {
 			transition: 0.6s;
 			z-index: 6;
@@ -65,6 +69,12 @@
 			}
 			.input:focus {
 				border: 1px solid #727272;
+			}
+			.input:hover {
+				transition: 0.5s;
+				box-shadow: 0px 0px 8px 1px white;
+			
+
 			}
 		}
 		.form_btn {

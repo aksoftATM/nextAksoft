@@ -5,20 +5,13 @@ import { motion, useSpring, useMotionValue, useTransform } from "framer-motion";
 import { interpolate } from "@popmotion/popcorn";
 import styles from "./style.module.scss";
 
-export function CardThree({
-	height = 400,
-	width = 300,
-	name,
-	title,
-	image,
-}: any) {
+export function CardThree({	height = 400,	width = 300,	name,	title,	image,}: any) {
+
 	const ref = useRef<HTMLDivElement>(null);
 	const [hover, setHover] = useState(false);
 	const [tapped, setTapped] = useState(false);
 
-	const centerPoint = useMemo(() => {
-		return [width / 2, height / 2];
-	}, [width, height]);
+	const centerPoint = useMemo(() => {		return [width / 2, height / 2];	}, [width, height]);
 	const xy = useMotionValue(centerPoint);
 
 	const tx = 0.05;
@@ -26,35 +19,22 @@ export function CardThree({
 	const transformX = interpolate([0, width], [width * tx, width * tx * -1]);
 	const rotateY = useTransform(xy, ([x]) => transformX(x));
 
-	const transformY = interpolate(
-		[0, height],
-		[height * tx * -1, height * tx * 1]
-	);
+	const transformY = interpolate(		[0, height],		[height * tx * -1, height * tx * 1]	);
 	const rotateX = useTransform(xy, ([, y]) => transformY(y));
 
-	const config = {
-		stiffness: 150,
-		damping: 20,
-	};
+	const config = { stiffness: 150, damping: 20,	};
 
 	const springX = useSpring(rotateX, config);
 	const springY = useSpring(rotateY, config);
 
-	const gradientOpacity = useTransform(xy, ([, y]) => {
-		return interpolate([0, height], [0, 0.3])(y);
-	});
+	const gradientOpacity = useTransform(xy, ([, y]) => {		return interpolate([0, height], [0, 0.3])(y);	});
 
 	const gradientOpacitySpring = useSpring(gradientOpacity, config);
 
-	const gradient = useTransform(gradientOpacitySpring, (opacity) => {
-		let [x, y] = xy.get();
-		if (y === centerPoint[1]) {
-			y = centerPoint[1] + 1;
-		}
-
+	const gradient = useTransform(gradientOpacitySpring, (opacity) => {	
+		let [x, y] = xy.get(); 		if (y === centerPoint[1]) {	y = centerPoint[1] + 1;		}
 		const angle = Math.atan2(y - centerPoint[1], x - centerPoint[0]);
-		const degree =
-			((angle > 0 ? angle : 2 * Math.PI + angle) * 360) / (2 * Math.PI) - 90;
+		const degree = 			((angle > 0 ? angle : 2 * Math.PI + angle) * 360) / (2 * Math.PI) - 90;
 		return `linear-gradient(${degree}deg, rgba(255,255,255,${opacity}), rgba(255,255,255,0) 80%)`;
 	});
 
@@ -79,13 +59,7 @@ export function CardThree({
 	}, [hover, xy, centerPoint]);
 
 	return (
-		<div
-			className={styles.container}
-			ref={ref}
-			style={{
-				height: `${height}px`,
-				width: `${width}px`,
-			}}>
+		<div	className={styles.container} 	ref={ref} style={{	height: `${height}px`,	width: `${width}px`,	}}>
 			<motion.div
 				className={styles.content}
 				style={{

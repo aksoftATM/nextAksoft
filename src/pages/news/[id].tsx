@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { FaLongArrowAltRight } from "react-icons/fa";
+
 import styles from "./style.module.scss";
 
 export default function AboutNews() {
@@ -52,7 +54,7 @@ export default function AboutNews() {
   return (
     <div className={styles.main}>
       <div className={styles.container}>
-        <h2  onClick={handleGoForward} className={styles.h2}>Новости : {data?.title_inner}</h2>
+        <h2  onClick={handleGoForward} className={styles.h2}>Новости: <FaLongArrowAltRight />  {data?.title_inner}</h2>
         <h3 className={styles.title}>{data?.title_inner}</h3>
         <p className={styles.text_p}>{data?.short_description}</p>
         <div className={styles.content}>

@@ -13,6 +13,7 @@ import { ServiceComponent } from "@/components/module/cardService";
 import { useEffect, useRef } from "react";
 import styles from "@/styles/home.module.css";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -64,7 +65,7 @@ export default function Home() {
         <link rel="canonical" href="https://aksoft.dev/"></link>
       </Head>
       <main className={styles.main}>
-        <div
+        {/* <div
           style={{
             width: "80vw",
             minHeight: "650px",
@@ -139,7 +140,21 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <ServiceComponent />
+        <ServiceComponent /> */}
+        <Image
+          width={800}
+          height={500}
+          alt="sulaiman"
+          src="https://cheber-bucket.s3.eu-central-1.amazonaws.com/1725357053975_11D86383-0644-471A-ABDD-F2727591A4B6.JPG"
+          className="w-full h-[500px]"
+        />
+        <Image
+          width={800}
+          height={500}
+          alt="sulaiman"
+          src="https://unibook-bucket.s3.eu-central-1.amazonaws.com/1708245078275_menspace bishkek.jpg"
+          className="w-full h-[500px]"
+        />
       </main>
     </>
   );

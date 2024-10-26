@@ -65,7 +65,7 @@ export default function Home() {
         <link rel="canonical" href="https://aksoft.dev/"></link>
       </Head>
       <main className={styles.main}>
-        {/* <div
+        <div
           style={{
             width: "80vw",
             minHeight: "650px",
@@ -140,21 +140,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <ServiceComponent /> */}
-        <Image
-          width={800}
-          height={500}
-          alt="sulaiman"
-          src="https://cheber-bucket.s3.eu-central-1.amazonaws.com/1725357053975_11D86383-0644-471A-ABDD-F2727591A4B6.JPG"
-          className="w-full h-[500px]"
-        />
-        <Image
-          width={800}
-          height={500}
-          alt="sulaiman"
-          src="https://unibook-bucket.s3.eu-central-1.amazonaws.com/1708245078275_menspace bishkek.jpg"
-          className="w-full h-[500px]"
-        />
+        <ServiceComponent />
       </main>
     </>
   );

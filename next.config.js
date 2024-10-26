@@ -8,6 +8,8 @@ const nextConfig = {
   images: {
     domains: [
       "basket-12.wb.ru",
+      "cheber.org",
+      "unibook.ai",
       "img.freepik.com",
       "logo.com",
       "cheber-bucket.s3.eu-central-1.amazonaws.com",
@@ -18,6 +20,18 @@ const nextConfig = {
       "images.freeimg.net",
       "unibook-backend-bucket.s3.eu-central-1.amazonaws.com",
       "unibook-bucket.s3.eu-central-1.amazonaws.com",
+    ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'unibook-bucket.s3.eu-central-1.amazonaws.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cheber-bucket.s3.eu-central-1.amazonaws.com',
+        pathname: '/**',
+      },
     ],
   },
 };
